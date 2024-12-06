@@ -1,0 +1,101 @@
+/* Overall body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #313131; /* Dark background */
+    color: #ddd; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Styling for the main header */
+h1 {
+    color: #333;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* Styling for the player list */
+ul.player-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjusts columns based on width */
+    grid-gap: 20px; /* Space between columns */
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Player card styling */
+.player-card {
+    background-color: #444; /* Darker background for each player card */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center; /* Center-align text and image */
+    padding: 10px;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content horizontally */
+}
+
+/* Styling for the player name link */
+.player-card a {
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+    font-size: 22px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for player cards */
+.player-card a:hover {
+    background-color: #333;
+    color: #4CAF50; /* Bright green text on hover */
+}
+
+/* Styling for images under each player name */
+.player-card img {
+    width: auto; /* Keep image width as per the aspect ratio */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the image covers the container without distorting */
+    margin-top: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .player-card a {
+        font-size: 20px;
+    }
+
+    ul.player-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .player-card img {
+        width: auto; /* Keep image width as per the aspect ratio */
+        height: 120px; /* Adjust height for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    ul.player-list {
+        grid-template-columns: 1fr; /* Show 1 player per row on very small screens */
+    }
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ player.name }} - Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/player-profile.css') }}">
+</head>
+<body>
+    <h1>{{ player.name }}</h1>
+    <div class="stats">
+        <p><strong>Matches:</strong> {{ player.matches }}</p>
+        <p><strong>Wins:</strong> {{ player.wins }}</p>
+        <p><strong>MVPs:</strong> {{ player.mvps }}</p>
+        <p><strong>Accuracy:</strong> {{ player.accuracy }}</p>
+        <p><strong>Highlights:</strong> {{ player.highlights }}</p>
+    </div>
+</body>
+</html>
