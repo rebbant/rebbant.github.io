@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ player.name }} - Profile</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/player-profile.css') }}">
+    <title>Player Profile</title>
+    <link rel="icon" type="image/x-icon" href="static/images/lol.ico">
+    <link rel="stylesheet" href="static/css/player-profile.css">
+    <link rel="stylesheet" href="static/css/gif.css">
+    <script src="static/js/player-data.js" defer></script>
+    <script src="static/js/gif-click.js" defer></script>
 </head>
 <body>
-    <h1>{{ player.name }}</h1>
+    <a href="index.html">
+        <img id="back-link" src="static/images/spade7.png" alt="Back to Index">
+    </a>
+    <h1 id="player-name">Player Name</h1>
     <div class="stats">
-        <p><strong>Matches:</strong> {{ player.matches }}</p>
-        <p><strong>Wins:</strong> {{ player.wins }}</p>
-        <p><strong>MVPs:</strong> {{ player.mvps }}</p>
-        <p><strong>Accuracy:</strong> {{ player.accuracy }}</p>
-        <p><strong>Highlights:</strong> {{ player.highlights }}</p>
+        <ul>
+            <li>
+                <strong>Main Champion: </strong><span id="main-champion"></span>
+            </li>
+            <li>
+                <strong>Mastery Points: </strong><span id="main-champion-points"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="match-history">
+        <ul id="match-history-list">
+        </ul>
     </div>
 </body>
 </html>
